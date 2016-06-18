@@ -1,0 +1,1 @@
+{"version":3,"sources":["modules/myModule.js","app.js"],"names":[],"mappings":"AAAA;AACA;AACA;ACDA;AACA","file":"app.js","sourcesContent":["console.log('Log from myModule');\n\n","//=require ./modules/myModule.js\n\n"],"sourceRoot":"/source/"}
