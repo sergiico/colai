@@ -237,6 +237,15 @@ body {
   padding-left: 9rem;
 }
 
+.justify {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
 .section {
   position: relative;
   margin: 8rem 0;
@@ -264,23 +273,14 @@ body {
 }
 
 .section--1-2-1 .arrow-2 {
-  position: absolute;
-  top: 100%;
-  left: 50%;
   margin-top: 19rem;
 }
 
 .section--1-2-2 .arrow-3 {
-  position: absolute;
-  top: 100%;
-  left: 50%;
   margin: -8rem 0 0 12rem;
 }
 
 .section--1-3-1 .arrow-4 {
-  position: absolute;
-  top: 100%;
-  left: 50%;
   margin: -3rem 0 0 5rem;
 }
 
@@ -297,11 +297,28 @@ body {
 }
 
 .section--2-2-1 .arrow-1 {
-  position: absolute;
   z-index: 2;
-  top: 100%;
-  left: 50%;
   margin: 7rem 0 0 -7rem;
+}
+
+.section--3-2-1 {
+  margin: 16rem 0;
+}
+
+.section--3-2-1 .arrow-5 {
+  margin: 5rem 0 0;
+}
+
+.section--3-2-2 .arrow-5 {
+  margin-top: -8rem;
+}
+
+.section--3-3-1 {
+  margin-bottom: 16rem;
+}
+
+.section--3-3-1 .arrow-6 {
+  margin: 10rem 0 0 20rem;
 }
 
 .section__number {
@@ -402,6 +419,13 @@ body {
   padding-bottom: 67.25746%;
 }
 
+.arrow-1, .arrow-2, .arrow-3, .arrow-4, .arrow-5, .arrow-6 {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  z-index: 1;
+}
+
 .arrow-1 {
   width: 100%;
   max-width: 15.14286em;
@@ -454,6 +478,32 @@ body {
   padding-bottom: 102.06186%;
 }
 
+.arrow-5 {
+  width: 100%;
+  max-width: 7.92857em;
+  background: url("../img/arrow5.png") no-repeat center;
+  background-size: cover;
+}
+
+.arrow-5:before {
+  content: "";
+  display: block;
+  padding-bottom: 289.18919%;
+}
+
+.arrow-6 {
+  width: 100%;
+  max-width: 4.21429em;
+  background: url("../img/arrow6.png") no-repeat center;
+  background-size: cover;
+}
+
+.arrow-6:before {
+  content: "";
+  display: block;
+  padding-bottom: 481.35593%;
+}
+
 .hierarchy {
   margin: -8rem auto 0;
   width: 100%;
@@ -466,6 +516,84 @@ body {
   content: "";
   display: block;
   padding-bottom: 51.13122%;
+}
+
+.meeting {
+  margin: 8rem auto 0;
+  width: 100%;
+  max-width: 65.42857em;
+  background: url("../img/meeting.jpg") no-repeat center;
+  background-size: cover;
+}
+
+.meeting:before {
+  content: "";
+  display: block;
+  padding-bottom: 99.12664%;
+}
+
+.app-interface-1 {
+  width: 100%;
+  max-width: 18.57143em;
+  background: url("../img/app_interface1.png") no-repeat center;
+  background-size: cover;
+  width: 26rem;
+}
+
+.app-interface-1:before {
+  content: "";
+  display: block;
+  padding-bottom: 201.53846%;
+}
+
+.app-interface-2 {
+  width: 100%;
+  max-width: 18.57143em;
+  background: url("../img/app_interface2.png") no-repeat center;
+  background-size: cover;
+  width: 26rem;
+}
+
+.app-interface-2:before {
+  content: "";
+  display: block;
+  padding-bottom: 201.53846%;
+}
+
+.app-interface-3 {
+  width: 100%;
+  max-width: 18.57143em;
+  background: url("../img/app_interface3.png") no-repeat center;
+  background-size: cover;
+  width: 26rem;
+}
+
+.app-interface-3:before {
+  content: "";
+  display: block;
+  padding-bottom: 201.53846%;
+}
+
+.app-interface-group {
+  margin-top: 7rem;
+}
+
+.app-interface-group .step {
+  margin-bottom: 7rem;
+}
+
+.people {
+  margin: auto;
+  width: 100%;
+  max-width: 70.71429em;
+  background: url("../img/people.jpg") no-repeat center;
+  background-size: cover;
+}
+
+.people:before {
+  content: "";
+  display: block;
+  padding-bottom: 35.15152%;
 }
 
 .header {
@@ -837,6 +965,103 @@ body {
   background: white;
 }
 
+.people-group {
+  position: relative;
+  padding-top: 25.25253%;
+  max-width: 99rem;
+  margin: 8rem auto 0;
+}
+
+.people-group .people {
+  position: relative;
+  z-index: 1;
+}
+
+.people-group__line {
+  position: absolute;
+  z-index: 0;
+  bottom: 41.66667%;
+  left: 0;
+  width: 1px;
+  background: #CCCCCC;
+  height: 10rem;
+}
+
+.people-group__line:nth-child(1) {
+  left: 6.86869%;
+  height: 38.33333%;
+}
+
+.people-group__line:nth-child(2) {
+  left: 18.38384%;
+  height: 50.83333%;
+}
+
+.people-group__line:nth-child(3) {
+  left: 28.48485%;
+  height: 44.16667%;
+}
+
+.people-group__line:nth-child(4) {
+  left: 38.58586%;
+  height: 35%;
+}
+
+.people-group__line:nth-child(5) {
+  left: 50.50505%;
+  height: 52.5%;
+}
+
+.people-group__line:nth-child(6) {
+  left: 62.12121%;
+  height: 44.16667%;
+}
+
+.people-group__line:nth-child(7) {
+  left: 71.71717%;
+  height: 27.5%;
+}
+
+.people-group__line:nth-child(8) {
+  left: 82.0202%;
+  height: 36.66667%;
+}
+
+.people-group__line:nth-child(9) {
+  left: 93.43434%;
+  height: 48.33333%;
+}
+
+.people-group__label {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  width: 15rem;
+  margin: 0 0 2rem -7.5rem;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.step {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-family: "montserrat-bold", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-size: 1.6rem;
+  line-height: 1;
+}
+
+.step__number {
+  position: relative;
+  top: 0.025em;
+  font-size: 4rem;
+  margin-right: 0.5em;
+}
+
 .bubbles-group {
   position: relative;
   margin: auto;
@@ -1020,8 +1245,29 @@ body {
   .arrow-4 {
     background-image: url("../img/arrow4@2x.png");
   }
+  .arrow-5 {
+    background-image: url("../img/arrow5@2x.png");
+  }
+  .arrow-6 {
+    background-image: url("../img/arrow6@2x.png");
+  }
   .hierarchy {
     background-image: url("../img/hierarchy@2x.png");
+  }
+  .meeting {
+    background-image: url("../img/meeting@2x.jpg");
+  }
+  .app-interface-1 {
+    background-image: url("../img/app_interface1@2x.png");
+  }
+  .app-interface-2 {
+    background-image: url("../img/app_interface2@2x.png");
+  }
+  .app-interface-3 {
+    background-image: url("../img/app_interface3@2x.png");
+  }
+  .people {
+    background-image: url("../img/people@2x.jpg");
   }
 }
 
@@ -1031,7 +1277,7 @@ body {
   }
 }
 
-@media only screen and (min-width: 1366px) {
+@media only screen and (min-width: 1400px) {
   .silouettes {
     background-image: url("../img/silouettes@2x.png");
   }
@@ -1062,8 +1308,29 @@ body {
   .arrow-4 {
     background-image: url("../img/arrow4@2x.png");
   }
+  .arrow-5 {
+    background-image: url("../img/arrow5@2x.png");
+  }
+  .arrow-6 {
+    background-image: url("../img/arrow6@2x.png");
+  }
   .hierarchy {
     background-image: url("../img/hierarchy@2x.png");
+  }
+  .meeting {
+    background-image: url("../img/meeting@2x.jpg");
+  }
+  .app-interface-1 {
+    background-image: url("../img/app_interface1@2x.png");
+  }
+  .app-interface-2 {
+    background-image: url("../img/app_interface2@2x.png");
+  }
+  .app-interface-3 {
+    background-image: url("../img/app_interface3@2x.png");
+  }
+  .people {
+    background-image: url("../img/people@2x.jpg");
   }
 }
 
