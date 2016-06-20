@@ -7,8 +7,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 (function () {
 
     /**
-     * PubSub interface
-     * @type {*|jQuery|HTMLElement}
+     * jQuery object for simple PubSub interface
      */
     var $dispatcher = $({});
 
@@ -185,6 +184,80 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         Video._onYouTubeIframeAPIReady();
     };
 
+    var ScrollController = function () {
+        var _instance = null;
+
+        var ScrollController = function () {
+            function ScrollController() {
+                _classCallCheck(this, ScrollController);
+
+                this.$root = $('body');
+                this.disabled = false;
+                this.scrollPos = null;
+                this._preventDefault = this._preventDefault.bind(this);
+                this.measureScrollbar();
+            }
+
+            _createClass(ScrollController, [{
+                key: '_preventDefault',
+                value: function _preventDefault(e) {
+                    e.preventDefault();
+                }
+            }, {
+                key: 'disable',
+                value: function disable() {
+                    if (this.disabled) return;
+                    this.$root.on('wheel', this._preventDefault);
+                    this.$root.addClass('scroll-disabled').css({
+                        paddingRight: this.scrollBar,
+                        overflow: 'hidden'
+                    });
+                    this.scrollPos = this.$root.scrollTop();
+                    this.disabled = true;
+                }
+            }, {
+                key: 'enable',
+                value: function enable() {
+                    if (!this.disabled) return;
+                    this.$root.off('wheel', this._preventDefault);
+                    this.$root.removeClass('scroll-disabled').css({
+                        paddingRight: '',
+                        overflow: ''
+                    });
+                    this.$root.scrollTop(this.scrollPos);
+                    this.disabled = false;
+                }
+            }, {
+                key: 'measureScrollbar',
+                value: function measureScrollbar() {
+                    var scrollDiv = document.createElement('div');
+                    scrollDiv.style.position = 'absolute';
+                    scrollDiv.style.top = '-9999px';
+                    scrollDiv.style.width = '50px';
+                    scrollDiv.style.height = '50px';
+                    scrollDiv.style.overflow = 'scroll';
+                    this.$root.append(scrollDiv);
+                    var scrollbarWidth = scrollDiv.offsetWidth - scrollDiv.clientWidth;
+                    this.$root[0].removeChild(scrollDiv);
+                    this.scrollBar = scrollbarWidth;
+                }
+            }]);
+
+            return ScrollController;
+        }();
+
+        return function () {
+            if (!_instance) {
+                _instance = new ScrollController();
+            }
+            return _instance;
+        };
+    }();
+
+    /*
+     module GradientText was taken from main page and was adapted
+     for inner pages, without back compatibility
+     */
     /**
      * Originally created by AP on 20.03.16.
      */
@@ -334,76 +407,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         duration: 500
     };
 
-    var ScrollController = function () {
-        var _instance = null;
-
-        var ScrollController = function () {
-            function ScrollController() {
-                _classCallCheck(this, ScrollController);
-
-                this.$root = $('body');
-                this.disabled = false;
-                this.scrollPos = null;
-                this._preventDefault = this._preventDefault.bind(this);
-                this.measureScrollbar();
-            }
-
-            _createClass(ScrollController, [{
-                key: '_preventDefault',
-                value: function _preventDefault(e) {
-                    e.preventDefault();
-                }
-            }, {
-                key: 'disable',
-                value: function disable() {
-                    if (this.disabled) return;
-                    this.$root.on('wheel', this._preventDefault);
-                    this.$root.addClass('scroll-disabled').css({
-                        paddingRight: this.scrollBar,
-                        overflow: 'hidden'
-                    });
-                    this.scrollPos = this.$root.scrollTop();
-                    this.disabled = true;
-                }
-            }, {
-                key: 'enable',
-                value: function enable() {
-                    if (!this.disabled) return;
-                    this.$root.off('wheel', this._preventDefault);
-                    this.$root.removeClass('scroll-disabled').css({
-                        paddingRight: '',
-                        overflow: ''
-                    });
-                    this.$root.scrollTop(this.scrollPos);
-                    this.disabled = false;
-                }
-            }, {
-                key: 'measureScrollbar',
-                value: function measureScrollbar() {
-                    var scrollDiv = document.createElement('div');
-                    scrollDiv.style.position = 'absolute';
-                    scrollDiv.style.top = '-9999px';
-                    scrollDiv.style.width = '50px';
-                    scrollDiv.style.height = '50px';
-                    scrollDiv.style.overflow = 'scroll';
-                    this.$root.append(scrollDiv);
-                    var scrollbarWidth = scrollDiv.offsetWidth - scrollDiv.clientWidth;
-                    this.$root[0].removeChild(scrollDiv);
-                    this.scrollBar = scrollbarWidth;
-                }
-            }]);
-
-            return ScrollController;
-        }();
-
-        return function () {
-            if (!_instance) {
-                _instance = new ScrollController();
-            }
-            return _instance;
-        };
-    }();
-
+    /*
+     these two modules (InputField and LogIn)
+     are the same as on main page, nothing was changed
+     */
     /**
      * Created by AP on 25.04.16.
      */
