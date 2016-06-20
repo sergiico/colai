@@ -14,6 +14,118 @@
   </head>
 
   <body>
+    <!-- log-in -->
+    <section class="log-in hidden">
+      <div class="content-wrap">
+        <div class="head__logo-tagline clearfix">
+          <div class="logo logo_big">
+            <p>Collaboration.ai</p>
+          </div>
+          <div class="logo logo_small">WBW</div>
+          <div class="mail-n-password clearfix">
+            <form id="login">
+              <div class="input-field input-field_email">
+                <input id="login__email" type="text">
+                <label for="login__email">Email</label>
+                <div class="border-line"></div>
+              </div>
+              <div class="input-field input-field_password">
+                <input id="login__password" type="password">
+                <label for="login__password">Password</label>
+                <div class="border-line"></div>
+              </div>
+              <div class="helper-btn">
+                <div class="helper-btn__content helper-btn__content_forgot">Forgot password?</div>
+                <div class="helper-btn__content helper-btn__content_back">Back to Login</div>
+              </div>
+            </form>
+          </div>
+          <div class="main-btn-wrap">
+            <div class="main-btn main-btn_login">
+              <p>Login</p>
+              <div class="main-btn__hover-wrap">
+                <p class="main-btn__hover">Login</p>
+              </div>
+            </div>
+            <div class="enter-ico"></div>
+          </div>
+          <div class="close-btn"></div>
+        </div>
+        <div class="sub-header">
+          <p>
+            <!--
+        Guarantee the right people are meeting each other for the right reasons at the right time, to be
+        successful during and after the gathering. Amaze participants with the personalization at your
+        offline gathering that they’ve only experienced online
+        -->
+            Are you ready to use Artificial Intelligence to improve performance, productivity and engagement?
+          </p>
+        </div>
+        <div class="private-beta">
+          <div class="private-beta__info">
+            <p class="private-beta__info__title">Private Beta</p>
+            <p class="private-beta__info__text">
+              We are in private beta.
+            </p>
+            <p class="private-beta__info__text">
+              Due to high demand, there is currently a waitlist to start creating high performing teams. If you have an impeding team kick-off or event, email us at:
+              <a href="mailto:success@collaboration.ai">success@collaboration.ai</a>
+            </p>
+          </div>
+
+          <div id="mc_embed_signup" class="private-beta__sign-up">
+            <form id="mc-embedded-subscribe-form" action="//collaboration.us13.list-manage.com/subscribe/post?u=5b7a9f5cbaad32e9758f6bb4d&amp;id=2bff365770" method="post" name="mc-embedded-subscribe-form" class="validate signup" target="_blank" novalidate>
+              <div id="mc_embed_signup_scroll">
+                <div class="input-field input-field_name">
+                  <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+                  <label for="mce-EMAIL">Email Address</label>
+                  <div class="border-line"></div>
+                </div>
+                <div class="mail-n-password clearfix">
+                  <div class="input-field input-field_email">
+                    <input type="text" value="" name="FNAME" class="" id="mce-FNAME">
+                    <label for="mce-FNAME">First Name</label>
+                    <div class="border-line"></div>
+                  </div>
+                  <div class="input-field input-field_password">
+                    <input type="text" value="" name="LNAME" class="" id="mce-LNAME">
+                    <label for="mce-LNAME">Last Name</label>
+                    <div class="border-line"></div>
+                  </div>
+                </div>
+                <div id="mce-responses" class="clear">
+                  <div class="response" id="mce-error-response" style="display:none"></div>
+                  <div class="response" id="mce-success-response" style="display:none"></div>
+                </div>
+                <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                  <input type="text" name="b_5b7a9f5cbaad32e9758f6bb4d_2bff365770" tabindex="-1" value="">
+                </div>
+                <div class="agree-submit clearfix">
+                  <div class="agree">
+                    <input id="signup__agree" type="checkbox" checked>
+                    <label for="signup__agree">I agree to <strong>C.AI Terms</strong></label>
+                  </div>
+                  <div class="submit">
+                    <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button" style="display: none;">
+                    <label for="mc-embedded-subscribe">
+                  <div class="main-btn main-btn_submit">
+                    <p>Sign up for free</p>
+                    <div class="main-btn__hover-wrap">
+                      <p class="main-btn__hover">Sign up for free</p>
+                    </div>
+                  </div>
+                  <div class="enter-ico"></div>
+                </label>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- ¯\_(ツ)_/¯ -->
 
     <!-- content -->
     <div class="out">
@@ -31,12 +143,11 @@
 
             <p class="header__logo-second-line">Intelligent creation of high performance teams</p>
             <p class="header__text">
-              Learn how we can help YOU succeed
-              <br>in today’s interconnected world.
+              Learn how we can help YOU succeed in today’s interconnected world. <br>Select your area of interest:
             </p>
           </div>
           <div class="header__login-group">
-            <a href="#" class="link">
+            <a id="login-btn" href="#" class="link">
               <span>Login</span>
               <span class="link__hover-wrap">
       <span class="link__hover">Login</span>
@@ -44,7 +155,7 @@
             </a>
 
             <div class="header__btn-separator"></div>
-            <a href="#" class="link">
+            <a id="register-btn" href="#" class="link">
               <span>Register</span>
               <span class="link__hover-wrap">
       <span class="link__hover">Register</span>
@@ -57,7 +168,38 @@
       <!-- ¯\_(ツ)_/¯ -->
 
       <div class="outer-wrap">
-        <h1 class="h1-like">HUB</h1>
+        <ul class="inner-wrap">
+          <li class="section">
+            <div class="section__number">01</div>
+            <a href="corporations.html" class="hub-link js-gradient">
+              <h2 class="h1-like">Corporations</h2>
+              <span class="subtitle">engineer intelligence <br>across your organization</span>
+              <span class="hub-link__line">Learn how</span>
+            </a>
+          </li>
+
+          <li class="section">
+            <div class="section__number">02</div>
+            <a href="events-meetings-conferences.html" class="hub-link js-gradient">
+              <h2 class="h1-like">Events <br>Meetings <br>Conferences</h2>
+              <span class="subtitle">transform networking serendipity <br>into business opportunity</span>
+              <span class="hub-link__line">Learn how</span>
+            </a>
+          </li>
+
+          <li class="section">
+            <div class="section__number">03</div>
+            <a href="education.html" class="hub-link js-gradient">
+              <h2 class="h1-like">Education</h2>
+              <span class="subtitle">
+            shape the minds of the future
+            <br>by adding intelligence to the way
+            <br>students work and collaborate together
+          </span>
+              <span class="hub-link__line">Learn how</span>
+            </a>
+          </li>
+        </ul>
       </div>
 
       <!-- footer -->
@@ -67,7 +209,7 @@
             <nav class="footer__nav">
               <ul>
                 <li>
-                  <a href="#" class="link link--nav link--align-left">
+                  <a href="corporations.html" class="link link--nav link--align-left">
                     <span>For corporations</span>
                     <span class="link__hover-wrap">
       <span class="link__hover">For corporations</span>
@@ -75,7 +217,7 @@
                   </a>
                 </li>
                 <li>
-                  <a href="#" class="link link--nav link--align-left">
+                  <a href="events-meetings-conferences.html" class="link link--nav link--align-left">
                     <span>For events, meetings & conferences</span>
                     <span class="link__hover-wrap">
       <span class="link__hover">For events, meetings & conferences</span>
@@ -83,7 +225,7 @@
                   </a>
                 </li>
                 <li>
-                  <a href="#" class="link link--nav link--align-left">
+                  <a href="education.html" class="link link--nav link--align-left">
                     <span>For educators & educational institutions</span>
                     <span class="link__hover-wrap">
       <span class="link__hover">For educators & educational institutions</span>
@@ -136,7 +278,7 @@
     <!-- ¯\_(ツ)_/¯ -->
 
     <!-- scripts -->
-
+    <script type="text/javascript" src="js/vendor.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
     <!-- ¯\_(ツ)_/¯ -->
 
