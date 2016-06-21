@@ -190,6 +190,14 @@ body { min-width: 1024px; background: white; color: #333333; font-family: "proxi
 
 .people:before { content: ""; display: block; padding-bottom: 35.7513%; }
 
+.fade-in { transition: all 0.5s ease; transition-property: opacity, -webkit-transform; transition-property: opacity, transform; transition-property: opacity, transform, -webkit-transform; opacity: 0; }
+
+.fade-in.slide-up { -webkit-transform: translateY(10px); -ms-transform: translateY(10px); transform: translateY(10px); }
+
+.fade-in.animate { opacity: 1; -webkit-transform: translateY(0); -ms-transform: translateY(0); transform: translateY(0); }
+
+.no-js .fade-in { transition: initial; opacity: initial; -webkit-transform: initial; -ms-transform: initial; transform: initial; }
+
 .header { position: relative; margin-bottom: 8rem; }
 
 .header--mini { position: fixed; z-index: 10; top: 0; left: 0; right: 0; min-width: 1024px; background: #333333; color: white; -webkit-transform: translateY(-100%); -ms-transform: translateY(-100%); transform: translateY(-100%); transition: -webkit-transform 0.35s ease; transition: transform 0.35s ease; transition: transform 0.35s ease, -webkit-transform 0.35s ease; }
@@ -388,7 +396,7 @@ body { min-width: 1024px; background: white; color: #333333; font-family: "proxi
 
 .hub-link:hover .subtitle { color: #D82020; }
 
-.hub-link__line { position: absolute; z-index: 0; bottom: 0.5em; right: 0; left: 0; font-family: "montserrat-regular", Helvetica Neue, Helvetica, Arial, sans-serif; font-weight: normal; font-size: 1rem; line-height: 1; letter-spacing: 0.25em; text-transform: uppercase; text-align: right; padding-right: 13rem; transition: color 0.5s ease; }
+.hub-link__line { position: absolute; z-index: 0; bottom: 0.4em; right: 0; left: 0; font-family: "montserrat-regular", Helvetica Neue, Helvetica, Arial, sans-serif; font-weight: normal; font-size: 1rem; line-height: 1; letter-spacing: 0.25em; text-transform: uppercase; text-align: right; padding-right: 13rem; transition: color 0.5s ease; }
 
 .hub-link__line .arrow-line { position: absolute; z-index: -1; top: 50%; left: 0; right: 0; margin-top: -1px; }
 
