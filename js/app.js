@@ -306,6 +306,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }, {
             key: '_prepareForDrawing',
             value: function _prepareForDrawing() {
+                this.s.attr('height', '');
                 this.paths.forEach(function (path) {
                     var len = path.getTotalLength();
                     path.attr({
@@ -346,17 +347,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                 this.s.attr({
                     viewBox: vb.x + ' ' + vb.y + ' ' + _w + ' ' + _h,
-                    width: _w,
-                    height: _h
+                    width: _w
                 });
+
+                this.shadow = this.s.filter(Snap.filter.shadow(dx, dy, blur, color, opacity));
 
                 this.s.select('g').attr({
                     transform: 'translate(' + shiftX + ' ' + shiftY + ')'
                 });
 
-                this.shadow = this.s.filter(Snap.filter.shadow(dx, dy, blur, color, opacity));
-
-                this.paths.attr({
+                this.paths[0].attr({
                     filter: this.shadow
                 });
             }
