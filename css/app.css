@@ -274,6 +274,12 @@ body { min-width: 320px; background: white; color: #333333; font-family: "proxim
 
 .arrow-line--to-right:after { left: auto; right: 0; border-color: #CCCCCC #CCCCCC transparent transparent; }
 
+.back-btn-group:hover .arrow-line:before, .hub-link:hover .arrow-line:before { visibility: visible; opacity: 1; }
+
+.back-btn-group:hover .arrow-line:after, .hub-link:hover .arrow-line:after { border-color: transparent transparent #EA47AA #EA47AA; }
+
+.back-btn-group:hover .arrow-line.arrow-line--to-right:after, .hub-link:hover .arrow-line.arrow-line--to-right:after { border-color: #EA47AA #EA47AA transparent transparent; }
+
 .back-btn-group { position: relative; margin-bottom: 5rem; font-family: "montserrat-regular", Helvetica Neue, Helvetica, Arial, sans-serif; font-weight: normal; font-size: 1rem; line-height: 1; letter-spacing: 0.25em; text-transform: uppercase; transition: color 0.5s ease; }
 
 .back-btn-group a { position: relative; z-index: 1; top: 0.1em; display: inline-block; vertical-align: top; color: inherit; text-decoration: none; }
