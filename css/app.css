@@ -904,13 +904,15 @@ body { min-width: 320px; background: white; color: #333333; font-family: "proxim
 
  .section--video { height: 34rem; }
 
- .section--1-2-1 { margin: 8rem 0 36rem; }
+ .section--1-2-1 { margin: 8rem 0 30rem; }
 
  .section--1-2-1 .list { position: relative; z-index: 1; }
 
- .section--1-2-1 .silouettes { z-index: 0; bottom: 0; margin-bottom: -19rem; margin-right: -20rem; width: 45rem; }
+ .section--1-2-1 .list-item:last-child { max-width: 15rem; }
 
- .section--1-2-1 .arrow { margin: 9rem 0 0 -7rem; }
+ .section--1-2-1 .silouettes { z-index: 0; bottom: 0; margin-bottom: -11rem; margin-right: -20rem; width: 45rem; z-index: -1; }
+
+ .section--1-2-1 .arrow { margin: 4rem 0 0 -7rem; }
 
  .section--1-2-2 .arrow { width: 3.4rem; margin: -5.5rem 0 0 8rem; }
 
